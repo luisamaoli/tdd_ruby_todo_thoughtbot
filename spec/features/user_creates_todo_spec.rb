@@ -1,8 +1,8 @@
 require "rails_helper"
-
+require 'support/features/sign_in'
 feature "User creats todos" do 
     scenario "successfully" do
-        visit root_path
+        sign_in
 
         click_on "Add a new todo"
         fill_in "Title", with: "Buy milk"
